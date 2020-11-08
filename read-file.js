@@ -12,6 +12,7 @@ let csvStream = fastcsv
   .on("data", function(data) {
 
     if(i<1000){
+        data = data +'';
         var dataArr = data.split(',');
         request.post(
             'https://vrpsznmzw9.execute-api.ap-south-1.amazonaws.com/v1/lambda-func-1',
